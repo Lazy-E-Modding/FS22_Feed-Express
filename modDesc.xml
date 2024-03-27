@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="67">
+    <author>Lazy E Modding</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Lazy E Feed Express Cake Feeder</en> 
+	</title>
+    <description>
+<en><![CDATA[When you have cows in hills and hollers, there is no point to bring a mixer truck out. 
+
+That's where the Lazy E Manufacturing Feed Express Cake feeder comes in at. 
+
+With adjustable hitch to allow it to match to any truck, along with a attach node, which allows you to keep the Feed Express on your truck as you can attach a gooseneck trailer still. 
+
+Mod Infomation:
+Name: Lazy E Feed Express Cake Box
+Function: Feeder
+Store Location: Tools > Trailers
+Price: $4000
+Colors: Black, Grey, Cream, White, Red, Blue, Yellow, Green]]></en>
+
+</description>
+    <iconFilename>icon_cakebox.dds</iconFilename>
+    <multiplayer supported="true"/>
+	<storeItems>
+        <storeItem xmlFilename="cakebox.xml"/>
+    </storeItems>
+	<brands>
+        <brand name="LAZY_E_MANUFACTURING" title="Lazy E Manufacturing" image="brand.dds"/>
+    </brands>
+    <l10n>
+        <text name="ui_colorCream">
+            <en>Cream</en>
+        </text>
+
+    </l10n>
+</modDesc>

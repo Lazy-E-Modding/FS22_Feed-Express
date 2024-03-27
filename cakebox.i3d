@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="cakebox" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="6" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="4" filename="textures/CakeFeeder_normal.png"/>
+    <File fileId="5" filename="textures/CakeFeeder_specular.png"/>
+    <File fileId="12" filename="textures/decals_diffuse.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="i3d_default_material" materialId="103" diffuseColor="0.8 0.8 0.8 1" specularColor="0.6 1 0">
+    </Material>
+    <Material name="i3dMat" materialId="104" diffuseColor="0.8 0.8 0.8 1" specularColor="0.494118 1 0">
+    </Material>
+    <Material name="mat_cakefeederMain" materialId="105" diffuseColor="0.00392157 0.00392157 0.00392157 1" customShaderId="6" customShaderVariation="colorMask">
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.014 0.015 0.479 40"/>
+      <CustomParameter name="colorMat1" value="0.5 0.5 0.5 8"/>
+      <CustomParameter name="colorMat2" value="0 0 0 5"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="mat_Decals" materialId="106" customShaderId="6" customShaderVariation="Decal">
+      <Texture fileId="12"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="107" diffuseColor="1 1 1 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="cakebox.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="MainComponet" dynamic="true" compound="true" collisionMask="2109442" clipDistance="300" nodeId="122" materialIds="103" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="2" name="Main" translation="0 0.635 0" nodeId="123" materialIds="105" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="Auger" translation="0 -0.412757 0" rotation="-161.85 -0 0" nodeId="124" materialIds="105" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="4" name="Cable" translation="0.989099 0.0698693 -1.49012e-08" nodeId="125" materialIds="105" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="5" name="Lid" translation="-0.0113705 0.123681 0.295741" nodeId="126" materialIds="105" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="6" name="Motor Pully" translation="-0.917653 -0.50915 0.1896" rotation="0 -0 -90" nodeId="127" materialIds="105" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="Pulley 1" translation="-0.961773 -0.494901 -0.176147" nodeId="128" materialIds="105" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="8" name="Unload Chute" translation="0.959454 -0.482 2.51392e-05" rotation="0 -0 90" nodeId="129" materialIds="105" castsShadows="true" receiveShadows="true"/>
+          <TransformGroup name="gameplay" translation="0 -0.634776 0" nodeId="130">
+            <TransformGroup name="filling" translation="0 5.96047e-08 0" nodeId="131">
+              <Shape shapeId="9" name="fillVolume" nodeId="132" materialIds="104" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+              <Shape shapeId="10" name="exactRootFillNode" translation="0 1.05177 0" scale="1.87273 0.763653 0.721898" kinematic="true" compound="true" collisionMask="1073741824" nodeId="133" materialIds="107" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+              <TransformGroup name="unloadInfoFront" translation="-0.923384 0.813576 0" nodeId="134"/>
+              <TransformGroup name="unloadInfoback" translation="0.924824 0.813576 0" nodeId="135"/>
+            </TransformGroup>
+            <TransformGroup name="dischargeNode_left" translation="1.84435 -0.979892 0" nodeId="136"/>
+            <TransformGroup name="tipOccAreas" translation="0 5.96047e-08 0" nodeId="137">
+              <TransformGroup name="start" translation="1.84632 0 0.522823" nodeId="138">
+                <TransformGroup name="width" translation="0 0 -1.14989" nodeId="139"/>
+                <TransformGroup name="height" translation="-3.42696 0 0" nodeId="140"/>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="effect" translation="0 -0.669024 0" nodeId="141"/>
+          </TransformGroup>
+          <Shape shapeId="11" name="Decals" translation="0 -0.546 0" scale="1 0.794722 1" nodeId="142" materialIds="106" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="12" name="Belt" translation="0 -0.635 0" scale="3.64746 1 1" nodeId="143" materialIds="105" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <TransformGroup name="AttachmentTransform" nodeId="144">
+          <TransformGroup name="attachment" translation="0 -9.53674e-07 0" rotation="-0 90 0" nodeId="145"/>
+          <TransformGroup name="attachmentPoint" nodeId="146"/>
+        </TransformGroup>
+      </Shape>
+  </Scene>
+
+</i3D>
