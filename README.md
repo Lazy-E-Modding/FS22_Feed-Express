@@ -1,7 +1,7 @@
-# fs22_Feed-Express
+# FS22_Feed-Express
 FS22 project repository for Feed Express
 
-
+# Base Game Version
 When managing livestock across hills and hollers, there's little need to haul a cumbersome mixer truck into the mix.
 
 Enter the Lazy E Manufacturing Feed Express Cake Feeder, designed precisely for such terrain.
