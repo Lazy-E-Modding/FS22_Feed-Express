@@ -41,5 +41,7 @@ Change Log:
 - Transitioned from mixer base to trailer base
 - Added default FS22 color options for the cake box
 - Added compatibility with Maize Plus [(Can be downloaded from the in-game modhub for free)](https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=253528&title=fs2022)
+
+
 1.0.0.0:
 - Initial Release
